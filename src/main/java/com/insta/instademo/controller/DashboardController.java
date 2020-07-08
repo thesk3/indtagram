@@ -1,5 +1,7 @@
 package com.insta.instademo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,12 +42,12 @@ loginRepository repository;
 		return s;
 	}
 	
-	@PostMapping("/addToUserList")
-	public @ResponseBody String addToUserList() {
+	@RequestMapping("/getAll")
+	public @ResponseBody List addToUserList() {
 		
-		
-		System.out.println("in message");
-		return null;
+		List<LoginVO> ls=repository.findAll();
+		System.out.println("in message--->"+ls);
+		return ls;
 	}
 
 
