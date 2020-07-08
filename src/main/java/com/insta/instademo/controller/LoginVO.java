@@ -18,7 +18,7 @@ public class LoginVO implements Serializable {
 	private long id;
 	@Column(name = "firstname")
 	private String username;
-	@Column(name = "firstname")
+	@Column(name = "password")
 	private String password;
 	public String getPassword() {
 		return password;
