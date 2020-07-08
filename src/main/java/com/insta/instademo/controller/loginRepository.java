@@ -7,6 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface loginRepository extends JpaRepository<LoginVO, Long>{
-List<LoginVO> findByFirstName(String FirstName);
-List<LoginVO> findAll();
+
 }
